@@ -504,6 +504,7 @@ function saveApiConfig() {
   sessionStorage.setItem('clinic_api_pass', API_PASS);
 
   document.getElementById('config-banner').style.display = 'none';
+  document.getElementById('logout-btn').style.display = '';
   toast('✅ Login salvo nesta sessão!');
   loadAll();
 }
@@ -567,6 +568,12 @@ function logout() {
 
 async function loadAll() {
   currentUser = await api('GET', '/api/me');
+
+  if (currentUser) {
+  document.getElementById('logout-btn').style.display = '';
+  document.getElementById('user-pill').style.display = '';
+  document.getElementById('user-pill').textContent = '👤 ' + currentUser.username;
+}
 
 if (currentUser) {
   document.getElementById('user-pill').style.display = '';
