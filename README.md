@@ -1,6 +1,6 @@
 # 🧩 Estoque Clínica
 
-Projeto de sistema de controle de estoque com QR Code para a clínicas de desenvolvimento infantil.
+Projeto de sistema de controle de estoque com QR Code para clínicas de desenvolvimento infantil.
 
 ## Deploy em 5 minutos
 
